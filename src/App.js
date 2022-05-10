@@ -8,12 +8,14 @@ import Login from './pages/LoginPage';
 import MyPage from './pages/MyPage';
 import NotFound from './pages/NotFound';
 import Profile from './pages/Profile';
-import Register from './pages/Register';
+import Register from './pages/RegisterPage';
+import Post1 from './pages/TrashPage';
 
 const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
+      <Route path="/trashPage" element={<Post1 />} />
         <Route index element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/profiles/:username" element={<Profile />} />
@@ -22,7 +24,7 @@ const App = () => {
         <Route path=":id" element={<Article />} />
       </Route>
       <Route path="/loginPage" element={<Login />} />
-      <Route path="/register" element={<Register />} />
+      <Route path="/registerPage" element={<Register />} />
       <Route path="/mypage" element={<MyPage />} />
       <Route path="*" element={<NotFound />} />
     </Routes>

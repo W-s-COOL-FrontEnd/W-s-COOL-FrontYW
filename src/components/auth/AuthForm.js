@@ -75,10 +75,19 @@ const AuthForm = ({ type, form, onChange, onSubmit, error }) => {
     <AuthFormBlock>
       <h3>{text}</h3>
       <form onSubmit={onSubmit}>
+      {type === 'register' && (
+          <StyledInput
+            autoComplete="nickname"
+            name="nickname"
+            placeholder="닉네임"
+            onChange={onChange}
+            value={form.nickname}
+          />
+        )}
         <StyledInput
           autoComplete="username"
           name="username"
-          placeholder="아이디"
+          placeholder="이메일"
           onChange={onChange}
           value={form.username}
         />
@@ -107,9 +116,9 @@ const AuthForm = ({ type, form, onChange, onSubmit, error }) => {
       </form>
       <Footer>
         {type === 'login' ? (
-          <Link to="/register">회원가입</Link>
+          <Link to="/registerPage">회원가입</Link>
         ) : (
-          <Link to="/login">로그인</Link>
+          <Link to="/loginPage">로그인</Link>
         )}
       </Footer>
     </AuthFormBlock>
