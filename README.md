@@ -1,4 +1,4 @@
 # W's COOL Web Project - Quatka
 
-This project is "touch the heart"
+프로젝트 설명설명
 
